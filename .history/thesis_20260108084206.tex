@@ -1,4 +1,4 @@
-% \documentclass[degree=master, degreetype=academic, bibtype=numeric, newstyle=true]{tongjithesis}  %双面打印，学术硕士更改为academic
+% \documentclass[degree=master, degreetype=academic, bibtype=numeric, newstyle=true]{tongjithesis}  %双面打印
 \documentclass[degree=master, degreetype=academic, bibtype=numeric, newstyle=true, oneside]{tongjithesis} % 预答辩的时候单面打印要加oneside参数
 % 选项：
 %   degree=[master|doctor],                             % 必选, 硕士 | 博士
@@ -24,21 +24,22 @@
 \addbibresource{ref/refs.bib}                           % 加入bib文件
 \tongjimathversion{99}                                  % 填写本文件中 tongjiinputfile 命令的使用次数; 可以比实际数量多, 但不可少
 \usepackage{tongjiutils}                                % 自定义宏放在这里, 包括一些常用指令
-\usepackage{tcolorbox}                                  % 代码块相关
-\usepackage{tikz}                                       % 图论相关，tikz制作矢量图
-\usepackage{amsmath}                                    % 数学公式相关
-\usepackage{amssymb}                                    % 数学符号相关
-\usepackage[normalem]{ulem}                             % 下划线相关
-\usepackage{bm}                                         % 加粗符号相关
-\usepackage{hyperref}                                   % 超链接相关
-\usepackage{tabularx, booktabs, makecell, array, multirow}  % 表格相关
-\usepackage{ragged2e}                                   % 段落排版相关
+\usepackage{tcolorbox} 
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[normalem]{ulem}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{tabularx, booktabs, makecell, array,multirow}
+\usepackage{ragged2e}
+\usepackage{amsmath}
 % \usepackage{algorithmic}
 % \usepackage{algorithm}
-\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc, fit, backgrounds, shadows}  % 图论相关
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc, fit, backgrounds, shadows}
 
 \newcommand{\codeurl}[2]{%
-  \footnote{\href{#1\#L#2}{Github参考代码, 第 #2行}}%    % 如果footnote放github链接对应第几行，可以参考此command
+  \footnote{\href{#1\#L#2}{Github参考代码, 第 #2行}}%    % 如果footnote放链接，可以参考此command
 }
 
 
@@ -53,12 +54,12 @@
 \frontmatter
 \tongjiinputfile{data/cover} \makecover                 % 封面示例, 位置: data/cover.tex
 \tableofcontents                                        % 目录( 自动生成 )
-% \tongjiinputfile[denotation]{data/denotation}             % 符号对照表示例, 位置: data/denotation.tex                           % 硕士论文不需要
-%%% 以下索引按需要选择, 不需要的注释掉即可， 这块硕士论文不需要插图索引
-% \listoffigures                                          % 插图索引
-% \listoftables                                           % 表格索引
-% \listofalgorithms                                       % 算法索引
-% \listofequations                                        % 公式索引
+\tongjiinputfile[denotation]{data/denotation}             % 符号对照表示例, 位置: data/denotation.tex
+%%% 以下索引按需要选择, 不需要的注释掉即可
+\listoffigures                                          % 插图索引
+\listoftables                                           % 表格索引
+\listofalgorithms                                       % 算法索引
+\listofequations                                        % 公式索引
 
 %%% 正文部分
 \mainmatter
@@ -68,7 +69,6 @@
 \tongjiinputfile{data/chap03}                           % 第三章示例, 位置: data/chap03.tex
 \tongjiinputfile{data/chap04}                           % 第四章示例, 位置: data/chap04.tex
 \tongjiinputfile{data/chap05}                           % 第五章示例, 位置: data/chap05.tex
-\tongjiinputfile{data/chap06}                           % 第六章示例, 位置: data/chap06.tex
 
 %%% 封底部分
 \backmatter
@@ -77,6 +77,6 @@
 \tongjiinputfile[appendix]{data/appendix}               % 附录示例, 位置: data/appendix.tex
 \tongjiinputfile[resume]{data/resume}                   % 个人简历示例, 位置: data/resume.tex
 \tongjiinputfile[statements]{data/statements}           % 原创性声明和授权书( 仅供测试, 最终提交时请替换为自己的扫描件 )
-% \includepdf{data/statements-scan.pdf}                   % 原创性声明和授权书扫描件( 仅供测试, 最终提交时请替换为自己的扫描件 )
+\includepdf{data/statements-scan.pdf}                   % 原创性声明和授权书扫描件( 仅供测试, 最终提交时请替换为自己的扫描件 )
 
 \end{document}

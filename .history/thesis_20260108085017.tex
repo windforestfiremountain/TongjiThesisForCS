@@ -25,7 +25,7 @@
 \tongjimathversion{99}                                  % 填写本文件中 tongjiinputfile 命令的使用次数; 可以比实际数量多, 但不可少
 \usepackage{tongjiutils}                                % 自定义宏放在这里, 包括一些常用指令
 \usepackage{tcolorbox}                                  % 代码块相关
-\usepackage{tikz}                                       % 图论相关，tikz制作矢量图
+\usepackage{tikz}                                       % 图论相关
 \usepackage{amsmath}                                    % 数学公式相关
 \usepackage{amssymb}                                    % 数学符号相关
 \usepackage[normalem]{ulem}                             % 下划线相关
@@ -53,7 +53,7 @@
 \frontmatter
 \tongjiinputfile{data/cover} \makecover                 % 封面示例, 位置: data/cover.tex
 \tableofcontents                                        % 目录( 自动生成 )
-% \tongjiinputfile[denotation]{data/denotation}             % 符号对照表示例, 位置: data/denotation.tex                           % 硕士论文不需要
+\tongjiinputfile[denotation]{data/denotation}             % 符号对照表示例, 位置: data/denotation.tex
 %%% 以下索引按需要选择, 不需要的注释掉即可， 这块硕士论文不需要插图索引
 % \listoffigures                                          % 插图索引
 % \listoftables                                           % 表格索引
