@@ -35,7 +35,7 @@
 > #### ※ TeXLive 2024 完整安装 &nbsp;&nbsp;(tested on Windows 11 / Ubuntu 24.04);
 > #### ※ MacTeX  2024 完整安装 &nbsp;&nbsp;(tested on macOS 10.15);
 > #### ※ 其它基于 TeXLive 2024 的在线编译环境 &nbsp;&nbsp;(tested on Overleaf).
-> #### ※ [VSCode]{https://zhuanlan.zhihu.com/p/166523064}本地编译可安装`LaTeX Workshop`插件, 并配置好 `settings.json` 文件, 建议使用 SumatraPDF 作为 PDF 阅读器.
+> #### ※ [VSCode](https://zhuanlan.zhihu.com/p/166523064)本地编译可安装`LaTeX Workshop`插件, 并配置好 `settings.json` 文件, 建议使用 SumatraPDF 作为 PDF 阅读器.
 
 注意:
 
