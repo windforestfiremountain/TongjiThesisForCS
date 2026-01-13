@@ -75,6 +75,14 @@
 > &nbsp;&nbsp;&nbsp;&nbsp;如果要返回到旧版, 请在第一行的参数部分设置 ``newstyle=false`` 还原
 > #### ※ 本模板配置了 GitHub Action 功能, 如果上传到 GitHub, 可实现自动编译并发布 Release ( [@xu-cheng/latex-action](https://www.github.com/xu-cheng/latex-action/tree/v3/) )
 > &nbsp;&nbsp;&nbsp;&nbsp;GitHub Actions 功能对于私有仓库 __不免费__, 若不需要该功能, 请删去 build-release.yml 文件中的 ``on`` 触发器 (位于 [build-release.yml @ L7-L13](https://github.com/wyqy/TongjiThesis_Proto/blob/main/.github/workflows/build-release.yml#L7-L13))
+> #### ※ 提交盲审版本时注释`tongjithesis.cls`中的这段，并且请注释`thesis.tex`中`\tongjiinputfile[statements]{data/statements}，`resume.tex`和`ack.tex`留白：  `
+```    
+    % \parbox[t][1.8cm][t]{\textwidth}{
+    %   \centering\hspace*{.3cm}
+    %   \includegraphics[width=10cm]{tongji-whole-logo.pdf}
+    % } % logo
+    % \\[-.6cm] 
+ ```
 
 
 
