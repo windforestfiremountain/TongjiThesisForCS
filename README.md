@@ -83,7 +83,12 @@
     % } % logo
     % \\[-.6cm] 
  ```
-
+并且注释`tongjithesis.cls`中这段`applymaster`，否则会出现英文字符`A thesis submitted to\\ Tongji University in partial fulfillment of the requirements for\\ the degree of \tongji@edegree`
+```
+% \iftongji@doctor \sihao[1.3]{\tongji@eapplydoctor}
+% \else \iftongji@master \sihao[1.3]{\tongji@eapplymaster}
+% \fi \fi \par\vskip 1.4cm
+```
 
 
 ## 5. F&Q
