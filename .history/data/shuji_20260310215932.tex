@@ -1,0 +1,43 @@
+% 后处理
+\makeatletter
+\define@key{tongji}{cheadingtitlenew}{\cheadingtitlenew{#1}}
+\gdef\cheadingtitlenew#1{\gdef\tongji@cheadingtitlenew{#1}}
+\tongjideletelinebreakcmd{tongji@ctitle}{tongji@posttitle}
+\cheadingtitlenew{\tongji@posttitle}
+
+% === 之前修改的英文摘要页眉补丁 ===
+\patchcmd{\tongji@makeabstract}
+  {\xparameter@heading@eother{\tongji@eabstractname}}
+  {\xparameter@heading@eother{Abstract}}
+  {}{}
+
+% ===============================================
+% === 新增：生成单独书脊页的命令 ===
+\newcommand{\makespine}{
+  \clearpage
+  \thispagestyle{empty}
+  % 页面总高 29.7cm，减去上下各 5cm，中间文本区高度设为 19.7cm。
+  % 利用 \vspace*{\fill} 上下弹性挤压，完美实现物理边距各 5cm。
+  \vspace*{\fill}
+  \begin{center}
+    % 宽度设为 1.2em，强制每个汉字自动换行，实现垂直排版
+    \parbox[c][19.7cm][s]{1.2em}{
+      \centering
+      \fangsong\zihao{4}\bfseries         % 仿宋、四号、加粗
+      \fontsize{14bp}{16bp}\selectfont    % 四号字对应14bp，行距严格指定为16bp(磅)
+      \setlength{\parskip}{0pt}           % 段前段后 0 磅
+      
+      \tongji@posttitle                   % 使用无换行符版本的标题
+      
+      \par\vfill
+      \tongji@cauthor  
+      宋昕宁                              % 姓名
+      \par\vfill
+      同济大学
+    }
+  \end{center}
+  \vspace*{\fill}
+  \clearpage
+}
+% ===============================================
+\makeatother

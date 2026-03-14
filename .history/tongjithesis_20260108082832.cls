@@ -905,7 +905,7 @@
                   \tongji@put@title{\tongji@cjointinstitutiontitle}  & \tongji@title@sep & \tongji@cjointinstitution  \\
               \fi
           \else% 学术学位
-              \ifx\tongji@cassosupervisor\@empty \setlength{\tongji@title@width}{6em}
+              \ifx\tongji@cassosupervisor\@empty \setlength{\tongji@title@width}{5em}
               \else \setlength{\tongji@title@width}{6em} \fi
               \ifxetex \begin{tabular}{p{\tongji@title@width}@{}c@{\extracolsep{8pt}}p{7cm}l}
               \else \begin{tabular}{p{\tongji@title@width}c@{\extracolsep{8pt}}p{7cm}l} \fi

@@ -39,6 +39,26 @@
   efunds={(Supported by the Natural Science Foundation of China for Distinguished Young Scholars, Grant No.123456789)} % 英文版基金信息
 }
 
+\newpage
+\thispagestyle{empty}
+\vspace*{5cm} % 顶部留白约 5cm
+\begin{center}
+  {\fangsong\zihao{4}\bfseries
+  % 四号字(14pt)，行距16磅需设置倍数 16/14 ≈ 1.14
+  \linespread{1.14}\selectfont
+  \setlength{\parskip}{0pt} % 段前段后0磅
+  \begin{minipage}[t][\dimexpr\textheight-10cm\relax]{2em}
+    \centering
+    \tongji@ctitle\par
+    \vfill
+    \tongji@cauthor\par
+    \vfill
+    同济大学
+  \end{minipage}
+  }
+\end{center}
+\newpage
+
 % 后处理
 \makeatletter
 \define@key{tongji}{cheadingtitlenew}{\cheadingtitlenew{#1}}

@@ -47,6 +47,8 @@
 \cheadingtitlenew{\tongji@posttitle}
 \makeatother
 
+
+
 % 定义中英文摘要和关键字
 % 背景+(1)(2)(3)三个工作内容，123分别讲述针对什么问题，做了什么工作，解决了什么问题。
 \begin{cabstract}
@@ -75,17 +77,8 @@
   {\xparameter@heading@eother{\tongji@eabstractname}}
   {\xparameter@heading@eother{Abstract}}
   {}{}
+% ===============================================
 \makeatother
-
-\begingroup
-\ctexset{
-  chapter={
-    % format 设置：单倍行距、居中、Arial字体(sffamily)、三号字(zihao{3})、加粗(bfseries)
-    format={\linespread{1}\selectfont\centering\sffamily\zihao{3}\bfseries},
-    % beforeskip={24bp}, % 段前 24 磅 (LaTeX中的 bp 对应 Word 的磅)
-    afterskip={18bp}   % 段后 18 磅
-  }
-}
 
 \begin{eabstract}
   \LaTeX~is the most popular typesetting system for academic writing.

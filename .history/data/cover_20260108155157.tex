@@ -64,29 +64,6 @@
 
 \ckeywords{LaTeX, 毕业论文, 模板, 同济大学}
 
-% 后处理
-\makeatletter
-\define@key{tongji}{cheadingtitlenew}{\cheadingtitlenew{#1}}
-\gdef\cheadingtitlenew#1{\gdef\tongji@cheadingtitlenew{#1}}
-\tongjideletelinebreakcmd{tongji@ctitle}{tongji@posttitle}
-\cheadingtitlenew{\tongji@posttitle}
-% === 新增：将英文摘要的页眉强制改为 Abstract ===
-\patchcmd{\tongji@makeabstract}
-  {\xparameter@heading@eother{\tongji@eabstractname}}
-  {\xparameter@heading@eother{Abstract}}
-  {}{}
-\makeatother
-
-\begingroup
-\ctexset{
-  chapter={
-    % format 设置：单倍行距、居中、Arial字体(sffamily)、三号字(zihao{3})、加粗(bfseries)
-    format={\linespread{1}\selectfont\centering\sffamily\zihao{3}\bfseries},
-    % beforeskip={24bp}, % 段前 24 磅 (LaTeX中的 bp 对应 Word 的磅)
-    afterskip={18bp}   % 段后 18 磅
-  }
-}
-
 \begin{eabstract}
   \LaTeX~is the most popular typesetting system for academic writing.
   \tongjithesis{}~is a~\LaTeX~template for Tongji University. The main contributions of this modification are as follows:
